@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hangman</title>
+</head>
+<body>
+
+    <div class="intro">
+        <div class="loading"></div>
+        <p class="clear hide">ZUMTHEZAZAKING</p>
+    </div>
+
+
+    <div class="mainMenu hide">
+        <h1>HANGMAN</h1>
+        <p>Turn your device or acquire a wider screen</p>
+        <button>START</button>
+    </div>
+
+
+    <div class="difficulty hide">
+        <h1 class="shaken">WHO ARE YOU?</h1><br>
+        <p data-difficulty="easy" class="shakenInvert">A JUVENILE</p>
+        <p data-difficulty="normal" class="shaken">AN OUTLAW</p>
+        <p data-difficulty="hard" class="shakenInvert">A MURDERER</p>
+    </div>
+
+
+    <div class="categories hide">
+        <h1 class="shaken">Rite of Words, Life and...?</h1><br>
+        <p data-category="weapons" class="shakenInvert">WEAPONS</p>
+        <p data-category="history" class="shaken">HISTORY</p>
+        <p data-category="science" class="shakenInvert">SCIENCE</p>
+    </div>
+
+
+    <div class="cutscene hide">
+        <p>SKIP &#8594;</p>
+        <video src="cutsceneCompress.mp4"></video>
+    </div>
+
+    <div class="ingame hide">
+        <div class="scene">
+            <video class="sceneVideo" src="hangmanIdle.mp4" loop></video>
+        </div>
+        <div class="game">
+            <p class="showCategory">Category: WEAPONS</p>
+            <p class="showChances">Chances: 5</p>
+            <p class="showHint">"Sample Text"</p><br>
+            <div class="hiddenWord">HELLO</div><br>
+            <p class="input">MAKE YOUR GUESS</p>
+            <div class="letterSelection hide">
+                <div class="letterSelectionMenu">
+                    <span class="close">X</span>
+                    <p class="instruct">PICK ONE</p>
+                    <div class="letters">
+                        <span class="available" data-letter="A">A</span>
+                        <span class="available" data-letter="B">B</span>
+                        <span class="available" data-letter="C">C</span>
+                        <span class="available" data-letter="D">D</span>
+                        <span class="available" data-letter="E">E</span>
+                        <span class="available" data-letter="F">F</span>
+                        <span class="available" data-letter="G">G</span>
+                        <span class="available" data-letter="H">H</span>
+                        <span class="available" data-letter="I">I</span>
+                        <span class="available" data-letter="J">J</span>
+                        <span class="available" data-letter="K">K</span>
+                        <span class="available" data-letter="L">L</span>
+                        <span class="available" data-letter="M">M</span>
+                        <span class="available" data-letter="N">N</span>
+                        <span class="available" data-letter="O">O</span>
+                        <span class="available" data-letter="P">P</span>
+                        <span class="available" data-letter="Q">Q</span>
+                        <span class="available" data-letter="R">R</span>
+                        <span class="available" data-letter="S">S</span>
+                        <span class="available" data-letter="T">T</span>
+                        <span class="available" data-letter="U">U</span>
+                        <span class="available" data-letter="V">V</span>
+                        <span class="available" data-letter="W">W</span>
+                        <span class="available" data-letter="X">X</span>
+                        <span class="available" data-letter="Y">Y</span>
+                        <span class="available" data-letter="Z">Z</span>
+                    </div>
+                    <p class="confirmButton">CONFIRM</p>
+                </div>
+            </div>
+        </div>
+        <div class="response hide">
+            <p></p>
+        </div>
+    </div>
+
+    <div class="victory blind hide">
+        <p></p>
+    </div>
+
+    <div class="aftermath bleedEntire hide">
+        <p></p>
+    </div>
+
+    <audio class="mainMenuMusic" src="mainMenuMusic.mp3" loop></audio>
+    <audio class="selectionMusic" src="selectionMusic.mp3" loop></audio>
+    <audio class="selectionSoundEffect" src="selectionSoundEffect.mp3"></audio>
+    <audio class="heavyBreathing" src="heavyBreathing.mp3" loop></audio>
+    <audio class="heartbeat" src="heartbeat.mp3" loop></audio>
+    <audio class="heartbeatFaster" src="heartbeatFaster.mp3" loop></audio>
+    <audio class="heartbeatFastest" src="heartbeatFastest.mp3" loop></audio>
+    <audio class="axechop1" src="axechop1.mp3"></audio>
+    <audio class="axechop2" src="axechop2.mp3"></audio>
+    <audio class="axechop3" src="axechop3.mp3"></audio>
+    <audio class="clapping" src="clapping.mp3"></audio>
+
+    
+    <script defer src="script.js"></script>
+</body>
+</html>

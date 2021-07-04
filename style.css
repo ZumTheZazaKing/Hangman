@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+
+html,body{
+    overflow: hidden;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.hide{
+    display: none !important;
+}
+
+.hidden{
+    visibility:  hidden !important;
+}
+
+.clear{
+    opacity: .3;
+}
+
+.unavailable{
+    opacity: .3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS For Intro*/
+.loading{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: transparent;
+    border: 25px solid whitesmoke;
+    border-top: 25px solid crimson;
+    animation: rotation linear 1s infinite;
+}
+
+@keyframes rotation{
+    from{transform: rotate(0);}
+    to{transform: rotate(360deg);}
+}
+
+.intro{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro p{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    letter-spacing: 3vw;
+    font-size: 3vw;
+    transition: 1s ease-in;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS for Main Menu*/
+.mainMenu{
+    text-align: center;
+    padding: 1em;
+    background-color: white;
+    border: 20px solid brown;
+    border-style: ridge;
+}
+
+
+.mainMenu h1{
+    letter-spacing: 10px;
+    transition: .2s ease-in;
+}
+
+.mainMenu p{
+    display: none;
+}
+
+
+.mainMenu button{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    background-color: black;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    color: white;
+    padding: 10px;
+    transition: .2s ease-in;
+}
+
+.mainMenu button:hover{
+    color: crimson;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS for difficulty selection*/
+.difficulty{
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    color: white;
+}
+
+
+.difficulty p{
+    cursor: pointer;
+    font-size: 1.5em;
+
+}
+
+.difficulty p:hover{
+    color: red;
+}
+
+.shaken{
+    animation: shake .5s infinite;
+}
+
+.shakenInvert{
+    animation: shake .5s infinite reverse;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS for categories*/
+.categories{
+    text-align: center;
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.categories p{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.categories p:hover{
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS for cutscene*/
+.cutscene{}
+
+.cutscene video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.cutscene p{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', serif;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 1.2em;
+}
+
+.cutscene p:hover{
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS for Ingame*/
+.ingame{
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    font-family: 'Cormorant Garamond', serif;
+    transition: 2s linear;
+}
+
+.ingame .scene{
+    border: 1px solid white;
+    flex: 1;
+    padding: 0;
+}
+
+.ingame .game{
+    border: 1px solid white;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.ingame .sceneVideo{
+    width: 100%;
+    height: 100%;
+}
+
+
+.ingame .showCategory{
+    margin: 0;
+    font-size: 1.2em;
+    width: 100%;
+}
+
+.ingame .showChances{
+    font-size: 1.2em;
+    margin: 0;
+    width: 100%;
+}
+
+.ingame .showHint{
+    font-size: 1.2em;
+    font-style: italic;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.ingame .hiddenWord{
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+}
+
+.ingame .input{
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.ingame .input:hover{
+    animation: shake .5s infinite;
+}
+
+
+.ingame .game .letterSelection{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.ingame .game .letterSelectionMenu{
+    background-color: black;
+    border-radius: 10px;
+    border: 2px solid white;
+    padding: 10px 20px 30px 20px;
+    width: 70%;
+}
+
+.ingame .game .letterSelectionMenu .close{
+    float: right;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.ingame .game .letterSelectionMenu .close:hover{
+    color: red;
+}
+
+.ingame .game .letterSelectionMenu .instruct{
+    text-align: center;
+    font-size: 30px;
+    animation: shake .5s infinite;
+}
+
+.ingame .letters{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+}
+
+.ingame .letters span{
+    border: 1px solid white;
+    text-align: center;
+    padding: 10px;
+    font-size: 24px;
+    background-color: black;
+}
+
+.ingame .letters .available:hover{
+    cursor: pointer;
+    border: 1px solid transparent;
+    box-shadow: 0 0 0px 5px rgb(255, 0, 0);
+    animation: shake .5s infinite reverse;
+}
+
+.selected{
+    border: 1px solid transparent;
+    box-shadow: 0 0 0px 5px rgb(0, 255, 0) !important;
+    animation: shake .5s infinite reverse;
+}
+
+.ingame .game .confirmButton{
+    float: right;
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    width: 20%;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.ingame .game .confirmButton:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS for aftermath*/
+.aftermath, .victory{
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    transition: .2s ease-in;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS for victory*/
+.blind{
+    box-shadow: inset 0 0 100em 100em rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS for response*/
+.response{
+    color: white;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.response p{
+    padding: 20px 40px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS for bleed effect*/
+.bleed{
+    box-shadow: inset 0 0 40px 20px rgb(255, 0, 0) !important;
+}
+
+.bleedMore{
+    box-shadow: inset 0 0 120px 40px rgb(255, 0, 0) !important;
+}
+
+.bleedEntire{
+    box-shadow: inset 0 0 100em 100em rgb(255, 0, 0) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 500px){
+    .mainMenu p{
+        display: block;
+    }
+
+    .mainMenu button{
+        display: none;
+    }
+
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+
+    
+    .ingame .hiddenWord{
+        font-size: 1.5em;
+    }
+
+    .ingame .showHint{
+        font-size: 1em;
+    }
+
+    .ingame .game .letterSelectionMenu .close{
+        font-size: 1em;
+        margin: 10px;
+    }
+
+    .ingame .game .letterSelectionMenu .instruct{
+        font-size: 24px;
+    }
+
+    .ingame .game .letterSelectionMenu .letter{
+        font-size: 35px;
+    }
+
+    .ingame .game .letterSelectionMenu{
+        padding: 10px;
+    }
+
+    .ingame .letters span{
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .response{
+        font-size: 16px;
+    }
+
+    .response p{
+        padding: 10px 20px;
+    }
+
+}
