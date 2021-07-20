@@ -550,6 +550,7 @@ confirmButton.addEventListener("click", () => {
             chopToPlay.load();
             chopToPlay.play();
 
+            window.navigator.vibrate(500);
             hangmanIdle.src = 'hangmanStrike.mp4';
             hangmanIdle.load();
             hangmanIdle.play();
